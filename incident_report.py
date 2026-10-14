@@ -14,7 +14,7 @@ def calculate_total(minutes_list):
 
 
 def calculate_average(minutes_list):
-    return calculate_total(minutes_list) / len(minutes_list) + 1)
+    return calculate_total(minutes_list) / len(minutes_list) + 1
 
 
 print("North DC total downtime:", calculate_total(north_dc))
