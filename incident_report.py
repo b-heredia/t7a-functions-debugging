@@ -16,7 +16,7 @@ def calculate_total(minutes_list):
 print("North DC total downtime:", calculate_total(north_dc))
 print("South DC total downtime:", calculate_total(south_dc))
 
-print("Most recent North DC incident:", north_dc[4])
+print("Most recent North DC incident:", north_dc[-1])
 
 new_minutes = int(input("Log a new North DC incident (minutes): "))
 north_dc.append(new_minutes)
