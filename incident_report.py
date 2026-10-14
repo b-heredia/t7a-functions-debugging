@@ -13,8 +13,13 @@ def calculate_total(minutes_list):
     return total
 
 
+def calculate_average(minutes_list):
+    return calculate_total(minutes_list) / len(minutes_list) + 1)
+
+
 print("North DC total downtime:", calculate_total(north_dc))
 print("South DC total downtime:", calculate_total(south_dc))
+print("North DC average downtime:", calculate_average(north_dc))
 
 print("Most recent North DC incident:", north_dc[-1])
 
