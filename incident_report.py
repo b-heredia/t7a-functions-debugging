@@ -2,18 +2,19 @@
 # Calculates downtime totals for warehouse incidents (Operations Problem Navigator).
 # Heads up: this code is repetitive AND has bugs. That's on purpose.
 
-north_dc = [45, 30, 120, 15]   # downtime minutes per incident
+north_dc = [45, 30, 120, 15]  # downtime minutes per incident
 south_dc = [60, 10, 25]
 
-total = 0
-for m in north_dc:
-    total = total + m
-print("North DC total downtime:", total)
 
-total = 0
-for m in south_dc:
-    total = total + m
-print("South DC total downtime:", total)
+def calculate_total(minutes_list):
+    total = 0
+    for m in minutes_list:
+        total = total + m
+    return total
+
+
+print("North DC total downtime:", calculate_total(north_dc))
+print("South DC total downtime:", calculate_total(south_dc))
 
 print("Most recent North DC incident:", north_dc[4])
 
